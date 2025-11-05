@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8o5qo3on08yk"]
+[gd_scene load_steps=7 format=3 uid="uid://b8o5qo3on08yk"]
 
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_oi3j2"]
+[ext_resource type="Theme" uid="uid://wkct8cqvt2o2" path="res://lessons/new_theme.tres" id="1_q2h7b"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_758ep"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="3_758ep"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_hoxo3"]
@@ -8,8 +9,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hoxo3"]
 shader = ExtResource("1_oi3j2")
 shader_parameter/pattern_sampler = ExtResource("2_758ep")
-shader_parameter/bg_color = Color(0.6758048, 1.0018481, 0.8065058, 1)
-shader_parameter/pattern_color = Color(0.4626842, 0.8206482, 0.80252075, 1)
+shader_parameter/bg_color = Color(0.98591435, 0.8854816, 0.91372216, 1)
+shader_parameter/pattern_color = Color(0.83896905, 0.7215832, 0.64205235, 1)
 shader_parameter/pattern_size = 256.0
 
 [node name="Dialogue" type="Control"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_q2h7b")
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_hoxo3")
@@ -68,17 +70,19 @@ offset_top = 380.0
 offset_right = -124.0
 offset_bottom = -588.6
 text = "Hello monkey"
+fit_content = true
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.43300003
-anchor_top = 0.020000001
+anchor_left = 0.43500003
+anchor_top = 0.023000002
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 754.63995
-offset_top = 920.4
+offset_left = 750.7999
+offset_top = 917.16
 offset_right = -106.0
 offset_bottom = -59.0
 grow_horizontal = 0
 grow_vertical = 0
+text = "NEXT"
